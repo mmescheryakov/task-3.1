@@ -8,7 +8,7 @@ void read_data(student**& stds, ifstream& is, string path) {
 	is.open(path);
 
 	if (!is.is_open())
-		cout << "Œ¯Ë·Í‡ ˜ÚÂÌËˇ Ù‡ÈÎ‡." << endl;
+		cout << "√é√∏√®√°√™√† √∑√≤√•√≠√®√ø √¥√†√©√´√†." << endl;
 	else {
 		string data[8] = { "", "", "", "", "", "", "", "" };
 		int count = 0;
@@ -34,7 +34,7 @@ void print_data(student** stds, size_t size_) {
 }
 
 void zapros_a(student** stds, size_t size_, string faculty_) {
-	cout << endl << "\t«‡ÔÓÒ ¿. ‘‡ÍÛÎ¸ÚÂÚ: " << faculty_ << endl;
+	cout << endl << "\t√á√†√Ø√∞√Æ√± √Ä. √î√†√™√≥√´√º√≤√•√≤: " << faculty_ << endl;
 	for (size_t i = 0; i < size_; i++) {
 		if (stds[i]->get_faculty() == faculty_)
 		{
@@ -45,7 +45,7 @@ void zapros_a(student** stds, size_t size_, string faculty_) {
 }
 
 void zapros_b(student** stds, size_t size_, int course_) {
-	cout << endl << "\t«‡ÔÓÒ ¡.  ÛÒ:" << course_ << endl;
+	cout << endl << "\t√á√†√Ø√∞√Æ√± √Å. √ä√≥√∞√±:" << course_ << endl;
 	for (size_t i = 0; i < size_; i++) {
 		if (stds[i]->get_course() == course_)
 		{
@@ -56,7 +56,7 @@ void zapros_b(student** stds, size_t size_, int course_) {
 }
 
 void zapros_v(student** stds, size_t size_, int year) {
-	cout << endl << "\t«‡ÔÓÒ ¬. √Ó‰: " << year << endl;
+	cout << endl << "\t√á√†√Ø√∞√Æ√± √Ç. √É√Æ√§: " << year << endl;
 	for (size_t i = 0; i < size_; i++) {
 		string s = stds[i]->get_bd();
 		s = s.substr(6, 4);
@@ -75,10 +75,13 @@ int main() {
 	ifstream is;
 	read_data(stds, is, "data.txt");
 	print_data(stds, 6);
-	zapros_a(stds, 6, "– -2");
+	zapros_a(stds, 6, "√ê√ä-2");
 	zapros_b(stds, 6, 4);
 	zapros_v(stds, 6, 1999);
-
+	
+	for (size_t i = 0; i < 6; i++)
+		delete stds[i];
+	delete[] stds;
 
 	return 0;
 }
