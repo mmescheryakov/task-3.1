@@ -1,0 +1,6 @@
+Ivanov Mihail Ivanovich 01.01.1998 Moscow 768231 RK-1 4
+Petrov Dmitrij Mihajlovich 01.01.1999 Moscow 486341 RK-1 3
+YUsupov Sergej Dmitrievich 01.01.2000 Moscow 7459832 RK-2 2
+Sidorov Dmitrij Evgen'evich 01.01.1998 Moscow 156698 RK-2 4
+Pyatkin Kirill Sergeevich 01.01.1999 Moscow 428751 RK-5 3
+Golyadkin YAkov Petrovich 01.01.2001 Moscow 159753 RK-6 1
