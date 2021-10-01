@@ -3,12 +3,12 @@
 #include "student.h"
 using namespace std;
 
-void read_data(student**& stds, ifstream& is, string path) {
+void read_data(student** stds, ifstream& is, string path) {
 
 	is.open(path);
 
 	if (!is.is_open())
-		cout << "Îøèáêà ÷òåíèÿ ôàéëà." << endl;
+		cout << "Error" << endl;
 	else {
 		string data[8] = { "", "", "", "", "", "", "", "" };
 		int count = 0;
@@ -34,7 +34,7 @@ void print_data(student** stds, size_t size_) {
 }
 
 void zapros_a(student** stds, size_t size_, string faculty_) {
-	cout << endl << "\tÇàïðîñ À. Ôàêóëüòåò: " << faculty_ << endl;
+	cout << endl << "\ta) Faculty is " << faculty_ << endl;
 	for (size_t i = 0; i < size_; i++) {
 		if (stds[i]->get_faculty() == faculty_)
 		{
@@ -45,7 +45,7 @@ void zapros_a(student** stds, size_t size_, string faculty_) {
 }
 
 void zapros_b(student** stds, size_t size_, int course_) {
-	cout << endl << "\tÇàïðîñ Á. Êóðñ:" << course_ << endl;
+	cout << endl << "\tb) Course is " << course_ << endl;
 	for (size_t i = 0; i < size_; i++) {
 		if (stds[i]->get_course() == course_)
 		{
@@ -56,7 +56,7 @@ void zapros_b(student** stds, size_t size_, int course_) {
 }
 
 void zapros_v(student** stds, size_t size_, int year) {
-	cout << endl << "\tÇàïðîñ Â. Ãîä: " << year << endl;
+	cout << endl << "\tc) Year is " << year << endl;
 	for (size_t i = 0; i < size_; i++) {
 		string s = stds[i]->get_bd();
 		s = s.substr(6, 4);
@@ -75,7 +75,7 @@ int main() {
 	ifstream is;
 	read_data(stds, is, "data.txt");
 	print_data(stds, 6);
-	zapros_a(stds, 6, "ÐÊ-2");
+	zapros_a(stds, 6, "RK-2");
 	zapros_b(stds, 6, 4);
 	zapros_v(stds, 6, 1999);
 	
